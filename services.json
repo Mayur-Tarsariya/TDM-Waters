@@ -1,0 +1,34 @@
+{
+    "carddata" : [
+        {
+            "photo":"./images/drinkingwatersystems.png",
+            "name":"Drinking Water System",
+            "description":"Drinking Water System Means The Pumping, Storage ,Treatment ,Distribution And Disposal Facilities And Services Associated With The Prevision Of Drinking Water.This All Facilities Provided By TDM Waters."
+        },
+        {
+            "photo":"./images/homewatertest.png",
+            "name":"Home Water Test",
+            "description":"TDM Waters Checks The Presence Of Heavy Metals, Dissolved Solids And Other Impurities In The Water.For Example, The Bacteria Test Kits Or A Dip Slide Method Can Detect Presence Of Bacteria In The Water."
+        },
+        {
+            "photo":"./images/problemwatersolution.png",
+            "name":"Problem Water Solution",
+            "description":"Solutions To Addressing Water Shortages By TDM Waters Include Dams And Reservoirs, Rainwater Harvesting, Aqueducts, Desalination, Water Reuse, And Water Conservation."
+        },
+        {
+            "photo":"./images/showerwaterfilter.png",
+            "name":"Shower Water Filter",
+            "description":"A Shower Filter Is A Water Filtration System That Protects Your Skin And Hair From Dryness And Irritation By Eliminating Chlorine And Chloramine From Water. Chlorin Is An Agitator Of A Host Of Skin Problems, Exacerbating Blemishes, Acne And Rashes."
+        },
+        {
+            "photo":"./images/tapwaterfilter.png",
+            "name":"Tap Water Filter",
+            "description":"A Water Filter Is A Device Based On Purification Technologies For Human Consumption For Improve The Quality Of Tap Water. Although National Aqueducts Are Subject To Strict Controls, Impurities And Contaminants Can Accumulate Inside Domestic Pipes, Altering The Taste And Quality Of Water Flowing From The Tap."
+        },
+        {
+            "photo":"./images/homefilterationsystem.png",
+            "name":"Home Filteration System",
+            "description":"A Whole House Water Filter, Also Reffered To As A Point-Of-Entry Tap, Is A System Installed Where Your Main Water Line Enters Your Home. It Can Help Reduce Contaminates Such As Chlorine, Iron, Sulfur And More From Your Water. Whole House Water Filters Bring Cleaner Water To Every Tap In Your Home."
+        }
+            ]
+}

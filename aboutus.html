@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TDM's WATER</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <nav>
+      <lable class="logo">TDM</lable>
+      <label class="logo1">Waters</label>
+      <ul class="list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="#">ABOUT US</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="team">More About TDM Waters</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-7">
+            <h3 class="knowmore">Know More About Us!</h3>
+              <h3 class="aboutdescription">
+                <p>Our Company Has Been Worked From 1970's In India. We Provided High Quality Water And Water Purifier Systems To Your Offices And Your Homes.</p>
+                <p>We Know The Importance Of Water Basically, Pure Water So, We Have Been Worked Best For Your Family. Water Is The Main Component Or You Can Say Part Of Our Precious Life So, Our Company will Provide You Best Water Purifiers.</p>
+                <p>As You Know Another Name Of Water Is Life So, We Provid A Watre With Natural PH Balance And Teste. Without This Criteria Your Health May Be In Danger Now Or After.</p>
+                <p>Our Water Purifier Systems Approved By Several Countries (BD, INDIA, USA, UK, UAE) Due To The Purity Of The Water Purifier Systems.</p>
+              </h3>
+              <h2 class="greeting">"Drink Pure, Stay Safe, With TDM Waters"</h2>
+          </div>
+          <div class="col-5">
+            <div class="card aboutimg">
+              <img src="./images/blackfilter.png" alt="this is img" width="80%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="aboutaddress">ABOUT AND ADDRESS</h2>
+              <h3 class="aboutdescription">Pure Watre Is The Base Of Health.
+                Drinking Water Without Harmfull Substance.
+                We Know The Importance Of Life,So We Give 99.99% Original watre Purifier Products to our customer.Our Water Purifier Product quality is certified or approved by the indian government.</h3>
+                <h3 class="address">Address : 143,Magannagar - 2,Katargam,Surat </h3>
+                <h3 class="address">Email : mayurtarsariya2@gmail.com </h3>
+                <h3 class="address"> Contact No : +91 94099 73003 </h3>
+          </div>
+          <div class="col-6"> <h2 class="aboutaddress">
+            LEAVE A SUGGESTION</h2>
+            <form method="get" onsubmit="return formvalidate()" autocomplete="off">
+              <input type="text" id="name1" name="name1" required placeholder="Enter Your Name..." class="footerfield">
+              <textarea name="suggestion" id="suggestion" cols="30" rows="3" placeholder="Enter Your Suggestion Here..." class="footerfield"></textarea>
+              <br>
+              <button type="submit" class="btnfooter">LEAVE SUGGESTION</button>
+          </div>
+        </div>
+      </div>
+      <center>
+        <img class="socialmedia" src="./images/facebook.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/twitter.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/linkedin.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/instagram.png" alt="" height="30px" width="30px">
+      </div>
+      </center>
+      <h5 class="copyright" style="text-align: center;">2023 © All Rights Reserved | Designed and Developed by TDM Waters</h5>
+    </footer>
+    <script>
+      function formvalidate(){
+        let name=document.getElementById('name1').value;
+        let suggestion=document.getElementById('suggestion').value;
+        if (!/^[a-zA-Z ]+$/.test(name)) {
+          alert("Name Contains Only Letters And Space😁");
+          return false;
+        }
+        if (!/^[a-zA-Z ]+$/.test(suggestion)) {
+          alert("Suggestion Contains Only Letters And Space😁");
+          return false;
+        } }
+     </script>
+     <script>
+      $(document).ready(function () {
+        $(".team").hide();
+        $(".team").slideDown(1000);
+        $(".aboutdescription").hide();
+        $(".aboutdescription").slideDown(2000);
+        $(".card").hide();
+        $(".card").slideDown(2000);
+        $(".greeting").hide();
+        $(".greeting").slideDown(2000);
+        $(".knowmore").hide();
+        $(".knowmore").slideDown(1500);
+       });
+      </script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TDM's WATER</title>
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+  </head>
+  <body>
+    <nav>
+      <lable class="logo">TDM</lable>
+      <label class="logo1">Waters</label>
+      <ul class="list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="team">Our Products</h1>
+      <h3 class="teamdescription">
+        <p>There Are Several Water Purifier Products</p>
+        <p>Of TDM Waters.</p>
+      </h3>
+      <div class="container">
+        <div class="row data">
+        </div>
+      </div>
+      <script src="jquery.js"></script>
+      <script>
+        $(document).ready(
+          function(){
+            $.ajax({
+              method:"GET",
+              url:"products.xml",
+              dataType:"xml",
+              success:loadxml,
+            })
+          }
+        )
+        function loadxml(xml){
+          console.log(xml);
+          $(xml).find("item").each(function(){
+            let photo=$(this).find("photo").text();
+            let name=$(this).find("name").text();
+            let price=$(this).find("price").text();
+            let click=$(this).find("click").text();
+            $(".data").append(
+              `
+              <div class="col-3">
+            <div class="card">
+              <div class="card-body">
+                <img class="productimg" src="${photo}" alt="">
+                <h2 class="card-title">${name}</h2>
+                <h4 class="post">${price}</h4>
+                <a href="#Purchase-Form"><button type="submit" class="probutton">${click}</button></a>
+              </div>
+            </div>
+          </div>
+              `
+            )
+          })
+        }
+      </script>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <form id="Purchase-Form" autocomplete="off" onsubmit="return validateform()">
+            <h2 class="buyproduct">Purchase-Form</h2>
+             <label for="name" class="lablecon">Enter Name :</label> 
+             <input type="text" class="purdesign" id="name" name="name" required>
+             <label for="email" class="lablecon">Enter Email :</label> 
+             <input type="email" class="purdesign" id="email" name="email" required>
+             <label for="phone" class="lablecon">Enter Phone_no :</label> 
+             <input type="tel" class="purdesign" id="phone" name="phone" required>
+             <label for="product" class="lablecon">Select Product :</label>
+             <select name="product" class="purdesign" id="product" required>
+              <option value="">--Choose A Product--</option>
+              <option value="Xpress And Clean" class="lablecon">Xpress And Clean</option>
+              <option value="Heat Box WiFi" class="lablecon">Heat Box WiFi</option>
+              <option value="Alkaline Ultra" class="lablecon">Alkaline Ultra</option>
+              <option value="Fitness Plus" class="lablecon">Fitness Plus</option>
+             </select>
+             <label for="quantity" class="lablecon">Enter Quantity :</label>
+             <input type="number" class="purdesign" id="quantity" name="quantity" required>
+             <label for="address" class="lablecon">Enter Address :</label> 
+             <textarea name="address" id="address" cols="30" rows="3" class="purdesign" required></textarea>
+             <button type="submit" class="submitbtn">Submit</button>
+             <button type="reset" class="submitbtn">Reset</button>
+            </form>
+            <script>
+              function validateform() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        
+        if (!/^[a-zA-Z ]+$/.test(name)) {
+          alert("Name Contains Only Letters And Space😁");
+          return false;
+        }
+        if (!/\S+\.\S+/.test(email)) {
+          alert("Email Must Be In Valid Format😶");
+          return false;
+        }
+        if (!/^\d{10}$/.test(phone)) {
+          alert("Phone No Can Contains Number Only 10 Digit Numbers✔️");
+          return false;
+        }
+      }
+            </script>
+          </div>
+          <div class="col-6">
+            <div class="img1">
+              <img src="./images/products1.png" alt="this is image">
+            </div>
+          </div>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="aboutaddress">
+              ABOUT AND ADDRESS</h2>
+              <h3 class="aboutdescription">Pure Watre Is The Base Of Health.
+                Drinking Water Without Harmfull Substance.
+                We Know The Importance Of Life,So We Give 99.99% Original watre Purifier Products to our customer.Our Water Purifier Product quality is certified or approved by the indian government.</h3>
+                <h3 class="address">Address : 143,Magannagar - 2,Katargam,Surat </h3>
+                <h3 class="address">Email : mayurtarsariya2@gmail.com </h3>
+                <h3 class="address"> Contact No : +91 94099 73003 </h3>
+          </div>
+          <div class="col-6"> <h2 class="aboutaddress">
+            LEAVE A SUGGESTION</h2>
+            <form method="get" onsubmit="return formvalidate()" autocomplete="off">
+              
+              <input type="text" id="name1" name="name1" required placeholder="Enter Your Name..." class="footerfield">
+              <textarea name="suggestion" id="suggestion" cols="30" rows="3" placeholder="Enter Your Suggestion Here..." class="footerfield"></textarea>
+              <br>
+            
+              <button type="submit" class="btnfooter">LEAVE SUGGESTION</button>
+          </div>
+        </div>
+      </div>
+      <center>
+        <img class="socialmedia" src="./images/facebook.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/twitter.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/linkedin.png" alt="" height="30px" width="30px">
+        <img class="socialmedia" src="./images/instagram.png" alt="" height="30px" width="30px">
+      </div>
+      </center>
+      <h5 class="copyright" style="text-align: center;">2023 © All Rights Reserved | Designed and Developed by TDM Waters</h5>
+    </footer>
+    <script>
+      function formvalidate(){
+        let name=document.getElementById('name1').value;
+        let suggestion=document.getElementById('suggestion').value;
+        if (!/^[a-zA-Z ]+$/.test(name)) {
+          alert("Name Contains Only Letters And Space😁");
+          return false;
+        }
+        if (!/^[a-zA-Z ]+$/.test(suggestion)) {
+          alert("Suggestion Contains Only Letters And Space😁");
+          return false;
+        } }
+     </script>
+     <script>
+     $(document).ready(function () {
+      $(".team").hide();
+      $(".team").slideDown(1000);
+      $(".teamdescription").hide();
+      $(".teamdescription").slideDown(1000);
+      $("#Purchase-Form").hide();
+      $("#Purchase-Form").slideDown(4000);
+      $(".img1").hide();
+      $(".img1").slideDown(4000);
+     });
+</script>
+  </body>
+</html>

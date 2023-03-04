@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<products>
+    <item>
+        <photo>./images/product1.jpg</photo>
+        <name>Xpress And Clean</name>
+        <price>$135.003</price>
+        <click>Buy Now</click>
+    </item>
+    <item>
+        <photo>./images/product4.webp</photo>
+        <name>Heat Box WiFi</name>
+        <price>$110.457</price>
+        <click>Buy Now</click>
+    </item>
+     <item>
+        <photo>./images/product2.png</photo>
+        <name>Alkaline Ultra</name>
+        <price>$171.822</price>
+        <click>Buy Now</click>
+    </item>
+    <item>
+        <photo>./images/product3.webp</photo>
+        <name>Fitness Plus</name>
+        <price>$208.641</price>
+        <click>Buy Now</click>
+    </item>
+</products>
