@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TDM's WATER</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="jquery.js"></script>
   </head>
   <body>
     <nav>
@@ -22,15 +22,18 @@
       </ul>
     </nav>
     <main>
-      <h1 class="team">TDM Water's Contact</h1>
-      <div class="teamdescription">
+      <h1 class="team" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-delay="200" data-aos-duration="600">TDM Water's Contact</h1>
+      <div class="teamdescription" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-delay="200" data-aos-duration="600">
         <p>If You Want To Contact TDM Waters Team Then</p>
         <p>Fill Out Our Contact Form.</p>
       </div>
-      <div class="container">
+      <div class="container contact">
         <div class="row">
           <div class="col-6">
-            <form method="get" id="form" onsubmit="return validateform()" autocomplete="off">
+            <form method="get" id="form" onsubmit="return validateform()" autocomplete="off" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-delay="300" data-aos-duration="1000">
               <h2 class="addcon">Contact-Form</h2>
               <label for="name" class="lablecon">Enter Name :</label>
               <input type="text" id="name" name="name" required class="purdesign">
@@ -44,7 +47,8 @@
             </form>
           </div>
           <div class="col-6">
-            <div class="image">
+            <div class="image" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-delay="500" data-aos-duration="1000">
               <img src="./images/products1.png" alt="this is image" style="margin-top: 20px;">
             </div>
           </div>
@@ -116,17 +120,9 @@
           return false;
         } }
     </script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      $(document).ready(function () {
-        $(".team").hide();
-        $(".team").slideDown(1000);
-        $(".teamdescription").hide();
-        $(".teamdescription").slideDown(1000);
-        $("#form").hide();
-        $("#form").slideDown(3000);
-        $(".image").hide();
-        $(".image").slideDown(3000);
-       });
-      </script>
+      AOS.init();
+    </script>
   </body>
 </html>
